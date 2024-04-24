@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Under Construction | Xeomatic</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+            line-height: 1.6;
+        }
+        .logo {
+            width: 400px; /* Increase image width */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 20px;
+        }
+        .contact-form {
+            margin-top: 50px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group textarea {
+            height: 150px;
+        }
+        .form-group input[type="submit"] {
+            width: auto;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .form-group input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+       #successMessage {
+            display: none;
+            color: #155724;
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid transparent;
+            border-radius: .25rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="data:image/png;base64,""" + {image_data} + """ alt="Xeomatic Logo" class="logo">
+        <h1>Site Under Construction</h1>
+        <p>We apologize for the inconvenience. Our website is currently under construction. Please check back soon for updates.</p>
+        <p>About Xeomatic:</p>
+        <p>Xeomatic is a new startup consulting firm dedicated to empowering emerging businesses with strategic IT solutions. Our team of dynamic professionals is committed to delivering innovative strategies tailored to the unique needs of startups. From developing scalable software solutions to implementing efficient IT infrastructure, Xeomatic is your partner for success in the digital age.</p>
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form id="contactForm" action="https://u8vuwy6t63.execute-api.eu-west-1.amazonaws.com/" method="post" enctype="application/x-www-form-urlencoded">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+            <div id="successMessage" class="successMessage">
+                Form submitted successfully! We will contact you shortly.
+            </div>
+        
+            <script>
+                function showSuccessMessage(success) {
+                    if (success) {
+                        document.getElementById("contactForm").style.display = "none";
+                        document.getElementById("successMessage").style.display = "block";
+                    }
+                }
+            </script>
+        </div>
+    </div>
+</body>
+</html>
